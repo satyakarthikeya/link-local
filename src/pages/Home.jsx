@@ -1,38 +1,18 @@
 // src/pages/Home.jsx
-import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 
 function Home() {
-  // Sample data for Special Deals (can be expanded)
+  // Sample data for Special Deals
   const specialDeals = [
     { name: 'Bread', price: '$2.50', business: 'Local Bakery', image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2' },
     { name: 'Laptop', price: '$800', business: 'Tech Haven', image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853' },
   ];
 
-  // Categories list
+  // Categories list (not shown in the screenshot but keeping for completeness)
   const categories = ['Food', 'Clothing', 'Electronics', 'Home', 'Services'];
 
   return (
     <div className="home">
-      {/* Navigation Bar */}
-      <nav className="navbar">
-        <div className="container">
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-          </ul>
-          <div className="search-section">
-            <select className="location-dropdown">
-              <option>Select Location</option>
-              <option>Nearby</option>
-              <option>Downtown</option>
-            </select>
-            <input type="text" placeholder="Search your local area..." className="search-bar" />
-            <Link to="/login" className="btn">Login</Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Logo Section */}
       <section className="logo-section">
         <div className="container">

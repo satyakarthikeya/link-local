@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import { Link, useNavigate } from 'react-router-dom';
-import { useUser } from '../context/userContext';
+import { useUser } from '../context/UserContext';
 
 function Navbar() {
   const { user, logout } = useUser();
@@ -14,17 +14,29 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link to="/" className="logo">Link Local</Link>
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li><Link to="/about">About</Link></li>
-          {user?.role === 'vendor' && <li><Link to="/myshop">My Shop</Link></li>}
-          {user ? (
-            <li><button onClick={handleLogout} className="btn">Logout</button></li>
-          ) : (
-            <li><Link to="/login">Login</Link></li>
-          )}
         </ul>
+        <div className="search-section">
+          <select className="location-dropdown">
+            <option>Select Location</option>
+            <option>Nearby</option>
+            <option>Downtown</option>
+          </select>
+          <input type="text" placeholder="Search your local area..." className="search-bar" />
+          <div className="user-actions">
+            {user ? (
+              <>
+                {user.role === 'vendor' && <Link to="/myshop" className="btn">My Shop</Link>}
+                <Link to="/cart" className="cart-icon">🛒 (0)</Link>
+                <button onClick={handleLogout} className="btn">Logout</button>
+              </>
+            ) : (
+              <Link to="/login" className="btn">Login</Link>
+            )}
+          </div>
+        </div>
       </div>
     </nav>
   );

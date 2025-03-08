@@ -7,7 +7,7 @@ import Login from './pages/Login';
 import VendorDashboard from './pages/VendorDashboard';
 import ConsumerShop from './pages/ConsumerShop';
 import MyShop from './pages/MyShop';
-import { UserProvider } from './context/userContext';
+import { UserProvider } from './context/UserContext';
 
 function App() {
   return (
