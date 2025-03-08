@@ -9,25 +9,46 @@ function ConsumerShop() {
   ];
 
   return (
-    <main className="container">
-      <section className="products">
-        <h2>Browse Products</h2>
-        <div className="product-grid">
-          {products.map((item, index) => (
-            <ProductCard key={index} {...item} />
-          ))}
+    <div className="consumer-shop">
+      <section className="hero-section">
+        <div className="container">
+          <h1>Shop Local</h1>
         </div>
       </section>
-      <section className="order-history">
-        <h2>Order History</h2>
-        <table>
-          <thead><tr><th>ID</th><th>Business</th><th>Total</th><th>Status</th><th>Review</th></tr></thead>
-          <tbody>
-            <tr><td>101</td><td>Local Bakery</td><td>$10</td><td>Delivered</td><td><button className="btn">Review</button></td></tr>
-          </tbody>
-        </table>
-      </section>
-    </main>
+      <main className="container fade-in">
+        <section className="products">
+          <h2>Browse Products</h2>
+          <div className="product-grid">
+            {products.map((item, index) => (
+              <ProductCard key={index} {...item} />
+            ))}
+          </div>
+        </section>
+        <section className="order-history">
+          <h2>Order History</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Business</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Review</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>101</td>
+                <td>Local Bakery</td>
+                <td>$10</td>
+                <td>Delivered</td>
+                <td><button className="btn btn-primary">Review</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+    </div>
   );
 }
 

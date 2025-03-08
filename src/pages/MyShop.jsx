@@ -8,26 +8,32 @@ function MyShop() {
   ];
 
   return (
-    <main className="container">
-      <h1>My Shop</h1>
-      <section className="shop-details">
-        <h2>Shop Details</h2>
-        <div className="card">
-          <p><strong>Name:</strong> Local Bakery</p>
-          <p><strong>Category:</strong> Food</p>
-          <button className="btn">Edit Shop</button>
+    <div className="myshop">
+      <section className="hero-section">
+        <div className="container">
+          <h1>My Shop</h1>
         </div>
       </section>
-      <section className="shop-products">
-        <h2>Manage Products</h2>
-        <div className="product-grid">
-          {shopProducts.map((item, index) => (
-            <ProductCard key={index} {...item} isVendor={true} />
-          ))}
-        </div>
-        <button className="btn">Add New Product</button>
-      </section>
-    </main>
+      <main className="container fade-in">
+        <section className="shop-details">
+          <h2>Shop Details</h2>
+          <div className="card">
+            <p><strong>Name:</strong> Local Bakery</p>
+            <p><strong>Category:</strong> Food</p>
+            <button className="btn btn-primary">Edit Shop</button>
+          </div>
+        </section>
+        <section className="shop-products">
+          <h2>Manage Products</h2>
+          <div className="product-grid">
+            {shopProducts.map((item, index) => (
+              <ProductCard key={index} {...item} isVendor={true} />
+            ))}
+          </div>
+          <button className="btn btn-primary">Add New Product</button>
+        </section>
+      </main>
+    </div>
   );
 }
 

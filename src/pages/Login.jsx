@@ -50,7 +50,7 @@ function Login() {
   return (
     <section className="auth">
       <div className="container">
-        <div className="form-container card">
+        <div className="form-container card fade-in">
           {isLogin ? (
             <>
               <h2>Login</h2>
@@ -69,7 +69,7 @@ function Login() {
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
-                <button className="btn" type="submit">Login</button>
+                <button className="btn btn-primary" type="submit">Login</button>
               </form>
               <p className="toggle-text">
                 Not a member? <span onClick={toggleForm}>Signup here</span>
@@ -109,7 +109,7 @@ function Login() {
                   <option value="consumer">Consumer</option>
                   <option value="vendor">Vendor</option>
                 </select>
-                <button className="btn" type="submit">Signup</button>
+                <button className="btn btn-primary" type="submit">Signup</button>
               </form>
               <p className="toggle-text">
                 Already a member? <span onClick={toggleForm}>Login here</span>

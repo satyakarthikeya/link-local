@@ -25,17 +25,15 @@ function Navbar() {
             <option>Downtown</option>
           </select>
           <input type="text" placeholder="Search your local area..." className="search-bar" />
-          <div className="user-actions">
-            {user ? (
-              <>
-                {user.role === 'vendor' && <Link to="/myshop" className="btn">My Shop</Link>}
-                <Link to="/cart" className="cart-icon">🛒 (0)</Link>
-                <button onClick={handleLogout} className="btn">Logout</button>
-              </>
-            ) : (
-              <Link to="/login" className="btn">Login</Link>
-            )}
-          </div>
+          {user ? (
+            <div className="user-actions">
+              {user.role === 'vendor' && <Link to="/myshop" className="btn">My Shop</Link>}
+              <Link to="/cart" className="cart-icon">🛒 (0)</Link>
+              <button onClick={handleLogout} className="btn">Logout</button>
+            </div>
+          ) : (
+            <Link to="/login" className="btn">Login</Link>
+          )}
         </div>
       </div>
     </nav>
