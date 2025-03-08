@@ -98,7 +98,7 @@ npm install
 Try running:
 
 ```sh
-npm run dev -- --port=3000  # Change port number if needed
+npm run dev   # Change port number if needed
 ```
 
 ## Conclusion
